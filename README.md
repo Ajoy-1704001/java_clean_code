@@ -129,8 +129,24 @@ Blank spaces should be used when:
         : ball;
 ## 3. Naming Convention
 Naming is necessary for variables, functions, arguments, classes and packages. But, it is more important to have meaningful name.
-- Name should be intention-revealing
+- Name should be intention-revealing and searchable.
+- **Classes and Interfaces name:** First letter of each internal word should be capatalized(**Upper camel case**). Example:
+  ```java
+  class BusTicket;
+  interface Animal;
+  ```
+  But we should keep in mind that some noisy word like Data, Info, etc. must be avoided as a suffix. Example: ```StudentData``, ```AccountInfo``` should be avoided.
 - To mention group of objects, we should avoid naming with suffix "List". Such as ```studentList``` ,```vehicleList```, etc. It is recommended to use just ```students```, ```vehicles```, ```studentGroup``` etc.
+- Methods method should be action verb and follow **lower camel case**. Example: ```doSomething()``.
+- **Variable Naming**: It should clearly state what the variable is all about. The variable should be understandable by seeing it's name. If comments are required, then the variable naming may not be appropiate.
+  ```java
+  int n; // Not clear
+  int numberOfStudents;  // Perfectly Understood
+  ```
+In case of local variable, we can use short form name. Such as:
+```java
+for(int i=0; i<10; i++);
+```
 ## 4. Statements
   Each line should contain at most one statement.
    
