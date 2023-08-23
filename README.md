@@ -143,11 +143,13 @@ Naming is necessary for variables, functions, arguments, classes and packages. B
   int n; // Not clear
   int numberOfStudents;  // Perfectly Understood
   ```
-In case of local variable, we can use short form name. Such as:
-```java
-for(int i=0; i<10; i++);
-```
-## 4. Statements
+  In case of local variable, we can use short form name. Such as:
+  ```java
+  for(int i=0; i<10; i++);
+  ```
+## 4. Function
+  Each line should contain at most one statement.
+## 5. Statements
   Each line should contain at most one statement.
    
 
