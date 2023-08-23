@@ -66,7 +66,7 @@ public class SourceFile {
 ```
 
 ## 2. Comments, White Space and Indentation
-### Comments
+### 2.1 Comments
 | Good                      |            Bad                               |
 | ------------------------- | -------------------------------------------- |
 | Others can understand and beneficial     | Justification or excuses for mess     |
@@ -76,14 +76,65 @@ public class SourceFile {
 There are various types of comments:
 ```java
 /*
-     * Block Comment
-     */
+* Block Comment
+*/
 
-    /* Single Line Comment */
-sourceFile.isEven(num);  /*Checks Even or not */
+/* Single Line comment */
+sourceFile.isEven(num);  /*Trailing comment*/
 
-        // End-of-line comment
-
+// End-of-line comment
 ```
+### 2.2 White Space
+**Blank Lines:**
+1. Two blank lines should always be used between sections in the source file and between classes and interfaces.
+2. One blank line should always be used:
+             - between methods.
+             - between local variable and it's first statement.
+
+**Blank Spaces:**
+Blank spaces should be used when:
+- A keyword followed by a parenthesis:
+  ```java
+  switch (value) {
+      ....
+  }
+- But, not method name followed by parenthesis.
+- Operators should be separated from their operands by spaces except unary operators, "++", "--" and ".".
+  ```java
+  sum = a + b;
+  sum++;
+  ```
+- Arguments should be separated by space after comma in arguments list.
+  ```java
+  public void add(int a, int b, int c){}
+  ```
+
+### 2.3 Indentation
+- 4 spaces for the indentation
+- Avoid longer than 80 characters in a single line
+- Break before an operator, after  a comma
+   ```java
+   function(longExpression1, longExpression2, longExpression3,
+           longExpression4, longExpression5);
+   longName1 = longName2 * (longName3 + longName4 - longName5)
+             + 4 * longname6;
+   ```
+- For ternary operators with long expression:
+  ```java
+  word = (booleanExpression) ? apple : ball;
+  word = (booleanExpression) ? apple
+                             : ball;
+  word = (booleanExpression)
+        ? apple
+        : ball;
+## 3. Naming Convention
+Naming is necessary for variables, functions, arguments, classes and packages. But, it is more important to have meaningful name.
+- Name should be intention-revealing
+- To mention group of objects, we should avoid naming with suffix "List". Such as ```studentList``` ,```vehicleList```, etc. It is recommended to use just ```students```, ```vehicles```, ```studentGroup``` etc.
+## 4. Statements
+  Each line should contain at most one statement.
+   
+
+
 
 
