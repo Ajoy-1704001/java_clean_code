@@ -67,11 +67,23 @@ public class SourceFile {
 
 ## 2. Comments, White Space and Indentation
 ### Comments
-| Good Comments             | Bad Comments                                 |
+| Good                      |            Bad                               |
 | ------------------------- | -------------------------------------------- |
 | Others can understand and beneficial     | Justification or excuses for mess     |
 | Informative and explains the intent      | Uses for something which can be easily understood from the code itself   |
 | Used for warning, TODO, highlighting the importance  |  Comment out codes  |
-  
+
+There are various types of comments:
+```java
+/*
+     * Block Comment
+     */
+
+    /* Single Line Comment */
+sourceFile.isEven(num);  /*Checks Even or not */
+
+        // End-of-line comment
+
+```
 
 
