@@ -152,7 +152,7 @@ Naming is necessary for variables, functions, arguments, classes and packages. B
   - Each function should perform only one task.
   - Function should avoid unneccessary side effects (Function is bound to do one thing, but it also does other hidden thing which causes unexpected things to change inside the class. Side effects also communicate with the external world such as I/O).
     ```java
-    public int sqaure(int x){
+    public int sqaure(int x) {
         System.out.println("Calculating Sqaure:");  /* Communicating with outside world */
         return x * x;
     }
@@ -162,11 +162,11 @@ Naming is necessary for variables, functions, arguments, classes and packages. B
     public class DemoClass {
     private int n;
 
-    public DemoClass(int n){
+    public DemoClass(int n) {
         this.n = n;
     }
 
-    public int nextInt(){
+    public int nextInt() {
         return n++;
     }
 
@@ -183,11 +183,11 @@ Naming is necessary for variables, functions, arguments, classes and packages. B
     ```
   - Avoid Monadic functions which doesn't follow the below form:
     ```java
-    public void toString(Date date){     /* should be avoided */
+    public void toString(Date date) {     /* should be avoided */
         //function implementation
     }
     
-    public String toString(Date date){  /* date conversion to string should return a string which makes sense */
+    public String toString(Date date) {  /* date conversion to string should return a string which makes sense */
         //function implementation
         //return statement
     }
@@ -201,7 +201,7 @@ Naming is necessary for variables, functions, arguments, classes and packages. B
     return (height > GENERAL_HEIGHT) ? "Large" : "Small";
     ```
   ### If, If-else, if-else-if-else
-  - ```If-else``` statement always use braces{}.
+  - ```If-else``` statement always use braces {}.
   ```java
   if (condition) {
       statements;
