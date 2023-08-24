@@ -145,10 +145,29 @@ Naming is necessary for variables, functions, arguments, classes and packages. B
   ```
   In case of local variable, we can use short form name. Such as:
   ```java
-  for(int i=0; i<10; i++);
+  for (int i=0; i<10; i++);
   ```
 ## 4. Function
-  Each line should contain at most one statement.
+  - Functions should be small.
+  - Each function should perform only one task.
+  - The number of arguments shouldn't be greater than three. (Testing becomes difficult when a function have more arguments).
+  - If there are more than two or three arguments, we should wrap few arguments into a class of their own.
+    ```java
+    public double calculateDistance(double x1, double y1, double x2, double y2){}  /* too many arguments */
+    public double calculateDistance(GeoPoint start, GeoPoint end){}  /* Perfect!!! GeoPoint class wraps cordinates (x,y) */
+    ```
+  - Avoid Monadic functions which doesn't follow the below form:
+    ```java
+    public void toString(Date date){     /* should be avoided */
+        //function implementation
+    }
+    
+    public String toString(Date date){  /* date conversion to string should return a string which makes sense */
+        //function implementation
+        //return statement
+    }
+    ```
+
 ## 5. Statements
   Each line should contain at most one statement.
    
