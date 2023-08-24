@@ -46,12 +46,12 @@ public class SourceFile {
     /*
      * constructor declaration
      */
-    public SourceFile(){}
+    public SourceFile() {}
 
     /*
      * methods description
      */
-    public void doSomething(){
+    public void doSomething() {
         //Implementation goes here
     }
     
@@ -59,7 +59,7 @@ public class SourceFile {
      * methods description
      * @Parameters description
      */
-    public void doSomethingWithParams(int paramInt, String paramString){
+    public void doSomethingWithParams(int paramInt, String paramString) {
         //Implementation goes here
     }
 }
@@ -69,9 +69,9 @@ public class SourceFile {
 ### 2.1 Comments
 | Good                      |            Bad                               |
 | ------------------------- | -------------------------------------------- |
-| Others can understand and beneficial     | Justification or excuses for mess     |
+| When other can understand and beneficial     | When it is used for justification or excuses for mess     |
 | Informative and explains the intent      | Uses for something which can be easily understood from the code itself   |
-| Used for warning, TODO, highlighting the importance  |  Comment out codes  |
+| Used for warning, TODO, highlighting the importance  |  Commenting out codes  |
 
 There are various types of comments:
 ```java
@@ -130,14 +130,14 @@ Blank spaces should be used when:
 ## 3. Naming Convention
 Naming is necessary for variables, functions, arguments, classes and packages. But, it is more important to have meaningful name.
 - Name should be intention-revealing and searchable.
-- **Classes and Interfaces name:** First letter of each internal word should be capatalized(**Upper camel case**). Example:
+- **Classes and Interfaces name:** First letter of each internal word should be capatalized(```Upper camel case```). Example:
   ```java
   class BusTicket;
   interface Animal;
   ```
   But we should keep in mind that some noisy word like Data, Info, etc. must be avoided as a suffix. Example: ```StudentData``, ```AccountInfo``` should be avoided.
 - To mention group of objects, we should avoid naming with suffix "List". Such as ```studentList``` ,```vehicleList```, etc. It is recommended to use just ```students```, ```vehicles```, ```studentGroup``` etc.
-- Methods method should be action verb and follow **lower camel case**. Example: ```doSomething()``.
+- Methods method should be action verb and follow ```lower camel case```. Example: ```doSomething()``.
 - **Variable Naming**: It should clearly state what the variable is all about. The variable should be understandable by seeing it's name. If comments are required, then the variable naming may not be appropiate.
   ```java
   int n; // Not clear
@@ -283,7 +283,19 @@ for (int i = 0; i < 10; i++) {
   ```
 - Special comments: we should use ```XXX``` to flag something that is bogus but works. Use ```FIXME``` to flag something
 that is bogus and broken.
-  
+- To access static variable, we should use class name instead of the object.
+  ```java
+  System.out.println(Student.schoolName); // Using class || so ok
+  System.out.println(studentObject.schoolName);  // Using object || avoid
+  ```
+ - Numerical constants shouldn't be coded directly. We can simply name a variable using all upper case letter and separate words are connected through "_".
+   ```java
+   public double APP_VERSION = 1.0;
+   .
+   .
+   .
+   System.out.println(APP_VERSION);
+ - 
 
   
     
