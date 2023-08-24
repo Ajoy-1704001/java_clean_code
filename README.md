@@ -150,6 +150,31 @@ Naming is necessary for variables, functions, arguments, classes and packages. B
 ## 4. Function
   - Functions should be small.
   - Each function should perform only one task.
+  - Function should avoid unneccessary side effects (Function is bound to do one thing, but it also does other hidden thing which causes unexpected things to change inside the class. Side effects also communicate with the external world such as I/O).
+    ```java
+    public int sqaure(int x){
+        System.out.println("Calculating Sqaure:");  /* Communicating with outside world */
+        return x * x;
+    }
+    ```
+    Again, the below code also have side effects if the method execution is changed.
+    ```java
+    public class DemoClass {
+    private int n;
+
+    public DemoClass(int n){
+        this.n = n;
+    }
+
+    public int nextInt(){
+        return n++;
+    }
+
+    public void setN(int n) {
+        this.n = n;
+    }
+}
+    ```
   - The number of arguments shouldn't be greater than three. (Testing becomes difficult when a function have more arguments).
   - If there are more than two or three arguments, we should wrap few arguments into a class of their own.
     ```java
@@ -169,9 +194,99 @@ Naming is necessary for variables, functions, arguments, classes and packages. B
     ```
 
 ## 5. Statements
-  Each line should contain at most one statement.
-   
+  - Each line should contain at most one statement.
+  - A ```return``` statement with a value should not use parentheses unless it is necessary.
+    ```java
+    return 0;
+    return (height > GENERAL_HEIGHT) ? "Large" : "Small";
+    ```
+  ### If, If-else, if-else-if-else
+  - ```If-else``` statement always use braces{}.
+  ```java
+  if (condition) {
+      statements;
+  }
 
+  if (condition) {
+      statements;
+  } else if (condition) {
+      statements;
+  } else {
+      statements;
+  }
+
+  if (condition) // should be avoided
+      statement;
+  ```
+  ### for
+  - In case of ```for```, we should avoid using more than three variables in the initialization or update clause. Single blank space should be used before the start of parentheses.
+  - Should use a blank space after each ```;```.
+```java
+for (int i = 0; i < 10; i++) {
+    //do something
+}
+```
+  ### while
+  A ```while``` statement should have the following form:
+  ```java
+  while (condition) {
+    statements;
+  }
+  ```
+  ### do-while
+  A ```do-while``` statement should have the following form:
+  ```java
+  do {
+      statements;
+  } while (condition);
+  ```
+  ### switch
+  It is a good practice to add another redundant ```break``` statement in ```default``` case. Because it prevents fall-through error if later another ```case``` is added.
+  ```java
+  switch (condition) {
+  case ABC:
+    statements;
+    /* falls through */
+  case DEF:
+    statements;
+    break;
+  case XYZ:
+    statements;
+    break;
+  default:
+    statements;
+    break;
+  }
+  ```
+  ### try-catch
+  A ```try-catch``` statement should have the following format:
+  ```java
+  try {
+      statements;
+  } catch (ExceptionClass e) {
+      statements;
+  }
+  ```
+
+## 6. Miscellaneous
+- It is a good practice to use parentheses in expression so that other can understand the precedence  of operators.
+  ```java
+  if (x > 10) {
+      return true;
+  } else {
+      return false;
+  }
+  ```
+  Instead of above code, we can simply use:
+  ```java
+  return x > 10;
+  ```
+- Special comments: we should use ```XXX``` to flag something that is bogus but works. Use ```FIXME``` to flag something
+that is bogus and broken.
+  
+
+  
+    
 
 
 
