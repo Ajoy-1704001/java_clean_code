@@ -4,7 +4,7 @@ There is a line in the book **Clean Code: A Handbook of Agile Software Craftmans
 
 We can't write code unless we can read the surrounding code. So, to make it readable, we should practice coding conventions. Coding convention in java is summarised below:
 
-## 1. Source Files Structure
+## 1. Source File Structure
 Each Java source files must contain a public class or interface. Java maintains an order in it's source file which is given below:
 - Beginning comments
 - Package and Import statements
